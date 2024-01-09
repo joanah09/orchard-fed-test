@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/assets/fonts/OpenSans/OpenSans-Light.ttf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/assets/fonts/OpenSans/OpenSans-Regular.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/assets/fonts/OpenSans/OpenSans-SemiBold.ttf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/src/assets/fonts/OpenSans/OpenSans-Bold.ttf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('/src/assets/fonts/OpenSans_Condensed/OpenSans_Condensed-Regular.ttf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open Sans Semi Condensed';
+    src: url('/src/assets/fonts/OpenSans_SemiCondensed/OpenSans_SemiCondensed-Regular.ttf') format('opentype');
+    font-weight: 400;
+}
+
+
+$font-open-sans: 'Open Sans', Sans-Serif;
+$font-open-sans-c: 'Open Sans Condensed', sans-serif;
+$font-open-sans-c-semi: 'Open Sans Semi Condensed', sans-serif;
