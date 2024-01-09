@@ -1,9 +1,11 @@
 .news {
     display: flex;
     flex-direction: column;
+    padding: 3em 0 1em;
     @include bp(desk) {
         justify-content: center;
         height: 100vh;
+        padding: 0;
     }
     h2 {
         text-align: center;
@@ -18,7 +20,7 @@
     h3 {
         margin-bottom: 0;
         font-size: 1em;
-        @include bp(desk) {
+        @include bp(d-wide) {
             font-size: 18px;
         }
     }
