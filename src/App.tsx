@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "./App.scss";
 import Articles from "./components/Articles";
 import News from "./components/News";

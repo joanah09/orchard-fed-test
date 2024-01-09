@@ -1,28 +1,21 @@
 import { useState } from "react";
 import data from "../data/data";
 
-interface ArticleDetails {
-  title: string;
-  desc: string;
-}
-
-const Articles = ({ details }: { details?: ArticleDetails }) => {
+const Articles = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const { images, article, conclusion } = data;
+  const { images, imagesZoomed, article, conclusion } = data;
 
   const handleImageClick = (
-    image: string,
+    imagesZoomed: string,
     event: React.MouseEvent<HTMLImageElement>
   ) => {
-    setSelectedImage(image);
+    setSelectedImage(imagesZoomed);
     setModalVisible(true);
 
-    // Clicked element
-    console.log("Image url: ", image);
+    console.log("Image url: ", imagesZoomed);
     console.log("Element: ", event.currentTarget);
   };
-
   const handleModalClick = () => {
     setModalVisible(false);
   };
@@ -32,18 +25,21 @@ const Articles = ({ details }: { details?: ArticleDetails }) => {
       <div className="articles-container">
         <div className="article-images">
           <img
-            src={images.image1}
-            onClick={(event) => handleImageClick(images.image1, event)}
+            src={images[0]}
+            onClick={(event) => handleImageClick(imagesZoomed[0], event)}
           />
           <div className="image-container">
-            <img
-              src={images.image2}
-              onClick={(event) => handleImageClick(images.image2, event)}
-            />
-            <img
-              src={images.image3}
-              onClick={(event) => handleImageClick(images.image3, event)}
-            />
+            {images.map((item, index) =>
+              index !== 0 ? (
+                <img
+                  src={item}
+                  key={index}
+                  onClick={(event) =>
+                    handleImageClick(imagesZoomed[index], event)
+                  }
+                />
+              ) : null
+            )}
           </div>
         </div>
 

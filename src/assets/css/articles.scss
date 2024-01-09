@@ -114,6 +114,13 @@
         background: $bg-dark-transparent;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+        img {
+            max-width: 384px;
+            width: 100%;
+            @include bp(desk) {
+                max-width: none;
+            }
+        }
         .close-btn {
             position: absolute;
             top: 15px;

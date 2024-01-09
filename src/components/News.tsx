@@ -15,7 +15,7 @@ const News = () => {
       <section className="news-container">
         {data.news.map((item, index) => (
           <article key={index}>
-            <img src={item.image1} alt={item.title} />
+            <img src={item.image} alt={item.title} />
             <div className="info">
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
