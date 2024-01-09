@@ -3,7 +3,7 @@
     $mob: "(min-width: 479px)";
     $tab: "(min-width: 767px)";
     $desk: "(min-width: 1180px)";
-    $d-wide: "(min-width: 1400px)";
+    $d-wide: "(min-width: 1280px)";
     $wide: "(min-width: 1925px)";
 
     @if $point == mob-sml {
@@ -22,7 +22,7 @@
       @media #{$desk} { @content; }
     }
 
-    @if $point == dwide {
+    @if $point == d-wide {
       @media #{$d-wide} { @content; }
     }
 
