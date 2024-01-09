@@ -4,7 +4,7 @@ import data from "../data/data";
 const Articles = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const { images, imagesZoomed, article, conclusion } = data;
+  const { images, article, conclusion } = data;
 
   const handleImageClick = (
     imagesZoomed: string,
@@ -25,18 +25,16 @@ const Articles = () => {
       <div className="articles-container">
         <div className="article-images">
           <img
-            src={images[0]}
-            onClick={(event) => handleImageClick(imagesZoomed[0], event)}
+            src={images[0].url}
+            onClick={(event) => handleImageClick(images[0].zoomedUrl, event)}
           />
           <div className="image-container">
             {images.map((item, index) =>
               index !== 0 ? (
                 <img
-                  src={item}
+                  src={item.url}
                   key={index}
-                  onClick={(event) =>
-                    handleImageClick(imagesZoomed[index], event)
-                  }
+                  onClick={(event) => handleImageClick(item.zoomedUrl, event)}
                 />
               ) : null
             )}

@@ -8,14 +8,18 @@ export default {
         "desc": "Sourcing local or organic food is a good way to start being more mindful about what you're cooking and eating.",
     },
     "images": [
-        "/src/assets/images/component-01/Image-01.jpg",
-        "/src/assets/images/component-01/Image-02.jpg",
-        "/src/assets/images/component-01/Image-03.jpg"
-    ],
-    "imagesZoomed": [
-        "/src/assets/images/component-01/Image-01@2x.jpg",
-        "/src/assets/images/component-01/Image-02@2x.jpg",
-        "/src/assets/images/component-01/Image-03@2x.jpg"
+        { 
+            "url": "/src/assets/images/component-01/Image-01.jpg",
+            "zoomedUrl": "/src/assets/images/component-01/Image-01@2x.jpg"
+        },
+        { 
+            "url": "/src/assets/images/component-01/Image-02.jpg",
+            "zoomedUrl": "/src/assets/images/component-01/Image-02@2x.jpg"
+        },
+        { 
+            "url": "/src/assets/images/component-01/Image-03.jpg",
+            "zoomedUrl": "/src/assets/images/component-01/Image-03@2x.jpg"
+        }
     ],
     "news": [
         {
