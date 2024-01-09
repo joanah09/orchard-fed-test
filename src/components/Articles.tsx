@@ -24,9 +24,6 @@ const Articles = ({ details }: { details?: ArticleDetails }) => {
   };
 
   const handleModalClick = () => {
-    closeModal();
-  };
-  const closeModal = () => {
     setModalVisible(false);
   };
 
@@ -65,7 +62,7 @@ const Articles = ({ details }: { details?: ArticleDetails }) => {
       {modalVisible && (
         <dialog className="modal" open onClick={handleModalClick}>
           <div className="modal-content fade">
-            <button className="close-btn" onClick={closeModal}>
+            <button className="close-btn" onClick={handleModalClick}>
               &times;
             </button>
             {selectedImage && <img src={selectedImage} />}
