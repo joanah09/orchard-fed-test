@@ -8,21 +8,21 @@ import { useSpring, animated } from "react-spring";
 function App() {
   const [scrollOpacity, setScrollOpacity] = useState(0);
 
-  const newsProps = useSpring({
+  const newsComponent = useSpring({
     opacity: scrollOpacity,
-    config: { duration: 500 },
+    config: { duration: 400 },
   });
 
-  const articlesProps = useSpring({
+  const articlesComponent = useSpring({
     opacity: 1,
     from: { opacity: 0 },
-    config: { duration: 500 },
+    config: { duration: 300 },
   });
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const maxScroll = 500;
+      const maxScroll = 700;
       const opacity = Math.min(1, scrollPosition / maxScroll);
       setScrollOpacity(opacity);
     };
@@ -36,10 +36,10 @@ function App() {
 
   return (
     <div>
-      <animated.div style={articlesProps}>
+      <animated.div style={articlesComponent}>
         <Articles />
       </animated.div>
-      <animated.div style={newsProps}>
+      <animated.div style={newsComponent}>
         <News />
       </animated.div>
     </div>
